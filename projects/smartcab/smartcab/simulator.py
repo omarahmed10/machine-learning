@@ -51,7 +51,7 @@ class Simulator(object):
         self.current_time = 0.0
         self.last_updated = 0.0
         self.update_delay = update_delay  # duration between each step (in seconds)
-       
+
         self.display = display
         if self.display:
             try:
@@ -59,7 +59,7 @@ class Simulator(object):
                 self.pygame.init()
                 self.screen = self.pygame.display.set_mode(self.size)
                 self._logo = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("images", "logo.png")), (self.road_width, self.road_width))
-                print self._logo
+
                 self._ew = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("images", "east-west.png")), (self.road_width, self.road_width))
                 self._ns = self.pygame.transform.smoothscale(self.pygame.image.load(os.path.join("images", "north-south.png")), (self.road_width, self.road_width))
 
